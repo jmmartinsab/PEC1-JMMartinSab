@@ -1,0 +1,528 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: $font-size;
+  max-width: $document-width;
+  scroll-behavior: smooth;
+}
+
+/*------------------------------------*\
+  #MENU
+\*------------------------------------*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $base-spacing * 4 $side-margin;
+
+  .header__logo {
+    width: $base-spacing * 8;
+  }
+
+  .hamburger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+  }
+
+  .hamburger:focus {
+    outline: none;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: $base-spacing / 4;
+
+    .lang {
+      font-size: $base-spacing * 2;
+      font-weight: $light;
+      color: $light-grey;
+      margin-bottom: $base-spacing * 2;
+
+      .lang__link {
+        text-decoration: none;
+        color: $light-grey;
+        font-size: $base-spacing * 2;
+
+        .lang__selector--esp {
+          font-weight: $semi-bold;
+          font-size: $base-spacing * 2;
+          color: $dark-grey;
+        }
+      }
+    }
+
+    .menu {
+      .menu__list {
+        display: flex;
+
+        .menu__item {
+          list-style: none;
+          padding-left: $base-spacing * 5;
+
+          .menu__link {
+            text-decoration: none;
+            color: $light-grey;
+            font-size: $base-spacing * 3;
+          }
+
+          .menu__link:hover {
+            font-weight: $semi-bold;
+            color: $dark-grey;
+          }
+
+          .menu__link--active {
+            color: $red;
+            font-weight: $semi-bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+*Fixed element to go back to the top
+*/
+
+.back-to-top {
+  position: fixed;
+  bottom: $base-spacing * 8;
+  right: $base-spacing * 4;
+
+  .back-to-top__icon {
+    font-size: $base-spacing * 4;
+    color: $top-icon-grey;
+  }
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  background-color: $red;
+  padding: $base-spacing * 5 $side-margin;
+
+  .footer__justify-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer__mail {
+      color: $white;
+      font-weight: $semi-bold;
+    }
+
+    .social {
+      @extend %social;
+
+      .social__icon {
+        @extend %social-icon;
+      }
+
+      .social__icon--white {
+        @extend %social-icon-white;
+      }
+
+      .social__icon--adjusting {
+        @extend %social-icon-adjusting;
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+  #HOME
+\*------------------------------------*/
+
+/**
+*Section about
+*/
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $base-spacing * 10;
+  padding: $base-spacing * 10 $side-margin;
+  background-color: $red;
+
+  .intro__title {
+    max-width: $base-spacing * 90;
+    font-size: $base-spacing * 8;
+    color: $white;
+  }
+
+  .intro__description {
+    max-width: $base-spacing * 118 - 4;
+    font-size: $base-spacing * 3;
+    font-weight: $light;
+    margin-top: $base-spacing * 3;
+    color: $white;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding-bottom: $base-spacing * 10;
+
+  .about__text-center {
+    width: $base-spacing * 90;
+    margin: 0 $base-spacing * 3;
+  }
+
+  .about__title {
+    @include title($dark-grey);
+  }
+
+  .about__paragraph {
+    margin-bottom: $base-spacing * 2 + 4;
+    color: $dark-grey;
+  }
+
+  .about__mail {
+    color: $red;
+    font-weight: $bold;
+    margin-bottom: $base-spacing * 2 + 4;
+  }
+
+  /**I wanted to reuse social block of footer section, but this made stylelint  
+  *show "no-descending-specifity", to avoid this error I've changed 
+  *class names and i've made the properties on the block inherited.
+  */
+  .about__social {
+    @extend %social;
+
+    .about__social-icon {
+      @extend %social-icon;
+    }
+
+    .about__social-icon--adjusting {
+      @extend %social-icon-adjusting;
+    }
+  }
+}
+
+/**
+*Section process
+*/
+
+.process {
+  background-color: $red;
+  max-width: 100%;
+  padding: $base-spacing * 10 $side-margin;
+  margin-bottom: 80px;
+
+  .process__title {
+    @include title($white);
+  }
+
+  .process__row {
+    @include rowContent();
+
+    .process__item {
+      width: 24vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: $base-spacing * 3;
+
+      .process__subtitle {
+        font-size: $base-spacing * 3;
+        color: $white;
+        text-align: center;
+        margin-bottom: $base-spacing * 2;
+      }
+
+      .process__image {
+        width: 18vw;
+        margin-bottom: $base-spacing * 2;
+      }
+
+      .process__paragraph {
+        color: $white;
+        font-size: $base-spacing * 2 + 4;
+        text-align: center;
+      }
+    }
+
+    .process__item:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}
+
+/**
+*Section principles
+*/
+
+.principles {
+  padding: 0 $side-margin;
+  margin-bottom: $base-spacing * 10;
+
+  .principles__title {
+    @include title($dark-grey);
+  }
+
+  .principles__row {
+    @include rowContent();
+    margin-bottom: 40px;
+
+    .principles__item {
+      width: 30vw;
+      margin-right: $base-spacing * 3;
+
+      .principles__subtitle {
+        font-size: $base-spacing * 3;
+        color: $dark-grey;
+        text-align: center;
+        margin-bottom: $base-spacing * 2;
+      }
+
+      .principles__paragraph {
+        color: $dark-grey;
+        font-size: $base-spacing * 2 + 4;
+        text-align: center;
+      }
+    }
+
+    .principles__item:nth-child(3) {
+      margin-right: 0;
+    }
+
+    /**
+    *Images for backgrounds of principles
+    */
+
+    .principles__item--one {
+      @include image("../images/1.png");
+    }
+    .principles__item--two {
+      @include image("../images/2.png");
+    }
+    .principles__item--three {
+      @include image("../images/3.png");
+    }
+    .principles__item--four {
+      @include image("../images/4.png");
+    }
+    .principles__item--five {
+      @include image("../images/5.png");
+    }
+    .principles__item--six {
+      @include image("../images/6.png");
+    }
+  }
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  /*------------------------------------*\
+    #MENU-MOBILE
+  \*------------------------------------*/
+
+  .header {
+    padding: 24px;
+    align-items: center;
+
+    .header__logo {
+      width: 64px;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .header__menu {
+      display: none;
+
+      .lang {
+        display: none;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+
+    /**
+    *Toggle classes for hamburger menu js
+    */
+
+    .js-header__menu--show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+
+      .js-lang--show {
+        display: block;
+        padding-top: $base-spacing * 4;
+        .lang__link {
+          font-size: 1rem;
+
+          .lang__selector--esp {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .js-menu--show {
+        display: block;
+
+        .js-menu__list--show {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .menu__item {
+            padding: $base-spacing * 2 0;
+
+            .menu__link {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*------------------------------------*\
+    #FOOTER-MOBILE
+  \*------------------------------------*/
+
+  .footer {
+    .footer__justify-content {
+      flex-direction: column;
+      align-items: center;
+
+      .footer__mail {
+        font-size: 3vw;
+        margin-bottom: $base-spacing * 3;
+      }
+    }
+  }
+
+  /*------------------------------------*\
+    #HOME-MOBILE
+  \*------------------------------------*/
+
+  /**
+  *About
+  */
+  .intro {
+    padding: $base-spacing * 10 $base-spacing * 3;
+    margin-bottom: $base-spacing * 6;
+
+    .intro__title {
+      font-size: 10vw;
+    }
+
+    .intro__description {
+      font-size: 5.5vw;
+    }
+  }
+
+  .about {
+    .about__text-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .about__title {
+        align-self: flex-start;
+        font-size: 6vw;
+      }
+
+      .about__paragraph {
+        font-size: 5vw;
+        margin-bottom: 5.5vw;
+      }
+
+      .about__mail {
+        font-size: 4vw;
+      }
+    }
+  }
+
+  /**
+  *Process
+  */
+
+  .process {
+    padding-left: $base-spacing * 3;
+    padding-right: $base-spacing * 3;
+    padding-top: $base-spacing * 6;
+    margin-bottom: $base-spacing * 6;
+
+    .process__title {
+      font-size: 6vw;
+      margin-bottom: $base-spacing * 2 + 4;
+    }
+
+    .process__row {
+      flex-direction: column;
+      align-items: center;
+
+      .process__item {
+        width: 94vw;
+        margin: $base-spacing * 4 0;
+
+        .process__subtitle {
+          font-size: 6vw;
+        }
+
+        .process__image {
+          width: 85vw;
+        }
+
+        .process__paragraph {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+
+  /**
+  *Principles
+  */
+
+  .principles {
+    padding: 0 $base-spacing * 3;
+
+    .principles__title {
+      font-size: 6vw;
+      margin-bottom: $base-spacing * 2 + 4;
+    }
+
+    .principles__row {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+
+      .principles__item {
+        width: 94vw;
+        margin: $base-spacing * 3 0;
+
+        .principles__subtitle {
+          font-size: 6vw;
+        }
+        .principles__paragraph {
+          font-size: 3.4vh;
+        }
+      }
+    }
+  }
+}

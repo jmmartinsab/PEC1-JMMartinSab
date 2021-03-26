@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+  <!-- do not remove this line! -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./assets/images/web-16x16.png" sizes="16x16" />
+  <title>Works</title>
+</head>
+
+
+<body>
+  <header id="head" class="header">
+    <div class="header__logo">
+      <a href="index.html">
+        <img alt="jmmartin-logo" src="./assets/images/Logo-jmmartin.png" />
+      </a>
+    </div>
+
+    <button class="hamburger hamburger--vortex" id="hamburger">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <div class="header__menu js-header__menu">
+      <p class="lang js-lang">
+        <a class="lang__link" href="error-eng.html"><span class="lang__selector--esp">ESP</span>/ENG</a>
+      </p>
+
+      <nav id="menu" class="menu js-menu">
+        <ul class="menu__list js-menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">About me</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="work.html">Work</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="back-to-top">
+    <a class="back-to-top__link" href="#head">
+      <i class="iconify back-to-top__icon" data-icon="bi:arrow-up-circle-fill"></i>
+    </a>
+  </div>
+
+  <main>
+    <section class="work-intro">
+      <h2 class="work-intro__title">Mi trabajo</h2>
+      <p class="work-intro__paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+        aspernatur. Ducimus, quidem vitae perspiciatis, magnam ullam libero,
+        ipsam necessitatibus recusandae harum dolores dicta cumque atque
+        nisi unde sed culpa soluta?
+      </p>
+      <p class="work-intro__paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+        aspernatur. Ducimus, quidem vitae perspiciatis, magnam ullam libero,
+        ipsam necessitatibus recusandae harum dolores dicta cumque atque
+        nisi unde sed culpa soluta?
+      </p>
+
+      <p class="work-intro__paragraph work-intro__paragraph--bold">
+        Puedes descargar mi CV
+        <a class="work-intro__link--bold" href="../src/assets/docs/CV-JMMartin-ESP.pdf" download="CV-JMMartín">aquí</a>
+      </p>
+    </section>
+
+    <section class="my-work">
+      <div class="my-work__row">
+        <!-- Add another my-work__link group to add more projects, use a modifier in my-work__card-- for change the card image -->
+        <a class="my-work__link" href="error-esp.html">
+          <div class="my-work__card my-work__card--nearly">
+            <h3 class="my-work__title">Near.ly</h3>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__justify-content">
+      <p class="footer__mail">me@jmmartindesign.com</p>
+
+      <div class="social">
+        <a href="#"><i class="iconify social__icon social__icon--white"
+            data-icon="ant-design:medium-circle-filled"></i></a>
+        <a href="#"><i class="iconify social__icon social__icon--white"
+            data-icon="ant-design:behance-circle-filled"></i></a>
+        <a href="#"><i class="iconify social__icon social__icon--white"
+            data-icon="ant-design:dribbble-circle-filled"></i></a>
+        <a href="#"><i class="iconify social__icon social__icon--white social__icon--adjusting"
+            data-icon="entypo-social:linkedin-with-circle"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/scripts/main.js"></script>
+  <!-- do not remove this line! -->
+  <script src="https://code.iconify.design/2/2.0.0-rc.6/iconify.min.js"></script>
+</body>
+
+</html>

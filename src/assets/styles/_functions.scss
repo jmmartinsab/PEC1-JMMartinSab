@@ -1,0 +1,53 @@
+/**
+*MIXINS
+*/
+
+//Use @include to run your mixin
+
+@mixin sizeToPercent($size) {
+  width: $size / 1920px * 100%;
+}
+
+@mixin maxWidthToPercent($siz) {
+  max-width: $siz / 1920px * 100%;
+}
+
+//function to change section title colour
+@mixin title($colour) {
+  font-size: $base-spacing * 5;
+  color: $colour;
+  margin-bottom: $base-spacing * 5;
+}
+
+//function to give format to rows
+@mixin rowContent() {
+  display: flex;
+  justify-content: space-between;
+}
+
+//function to add a background image in index.html principles
+@mixin image($link) {
+  background-image: url($link);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//function to add a background image in work.html my-work__card
+@mixin picture($link) {
+  background: url($link);
+  background-size: cover;
+  background-position: center;
+}
+
+//function to apply hover over my-work__card
+@mixin pictureHover($pic) {
+  background: linear-gradient(
+      180deg,
+      rgba(40, 39, 39, 0) 50%,
+      rgba(40, 39, 39, 0.7) 100%
+    ),
+    url($pic);
+  background-size: cover;
+  background-position: center;
+}

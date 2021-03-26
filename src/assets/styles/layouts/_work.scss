@@ -1,0 +1,139 @@
+/*------------------------------------*\
+  #WORK
+\*------------------------------------*/
+
+/**
+*Intro section
+*/
+
+.work-intro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $base-spacing * 10;
+  padding: $base-spacing * 10 $side-margin;
+  background-color: $red;
+
+  .work-intro__title {
+    @include title($white);
+  }
+
+  .work-intro__paragraph {
+    font-size: $base-spacing * 2 + 4;
+    max-width: $base-spacing * 100;
+    margin-bottom: $base-spacing * 3 - 2;
+    color: $white;
+  }
+
+  .work-intro__paragraph--bold {
+    font-weight: $bold;
+    font-size: $base-spacing * 2 + 4;
+    padding-top: $base-spacing * 2 + 2;
+    color: $white;
+
+    .work-intro__link--bold {
+      text-decoration: underline;
+      color: $white;
+      font-size: $base-spacing * 2 + 4;
+    }
+  }
+}
+
+/**
+*Works section
+*/
+
+.my-work {
+  .my-work__row {
+    @extend %work-row;
+
+    .my-work__link {
+      text-decoration: none;
+
+      .my-work__card {
+        @extend %card-background;
+
+        .my-work__title {
+          @extend %card-title;
+        }
+      }
+
+      .my-work__card:hover .my-work__title {
+        opacity: 1;
+      }
+
+      /**
+      *FIRST PROJECT, Near.ly
+      *
+      *To add another project, copy the code below and change the  
+      *image route of the function picture and pictureHover.
+      *Separate the projects with comment.
+      */
+
+      .my-work__card--nearly {
+        @include picture("../images/nearly/head.png");
+      }
+
+      .my-work__card--nearly:hover {
+        @extend %card-hover;
+
+        @include pictureHover("../images/nearly/head.png");
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  /**
+  *WORK INTRO MOBILE
+  */
+
+  .work-intro {
+    margin-bottom: $base-spacing * 6;
+    padding: $base-spacing * 10 $base-spacing * 3;
+
+    .work-intro__title {
+      font-size: 8vw;
+    }
+
+    .work-intro__paragraph {
+      font-size: 4.4vw;
+    }
+
+    .work-intro__paragraph--bold {
+      font-size: 4.4vw;
+
+      .work-intro__link--bold {
+        font-size: 4.4vw;
+      }
+    }
+  }
+
+  /**
+  *WORK PROJECTS MOBILE
+  */
+  .my-work {
+    .my-work__row {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 $base-spacing * 3;
+
+      .my-work__link {
+        .my-work__card {
+          width: 80vw;
+          height: 80vw;
+
+          .my-work__title {
+            font-size: 8vw;
+            opacity: 1;
+            text-shadow: rgba(31, 29, 29, 0.5) -2px -2px 4px,
+              rgba(31, 29, 29, 0.5) 2px 2px 4px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/*------------------------------------*\
+  #ERROR
+\*------------------------------------*/
+
+.go-back {
+  position: fixed;
+  top: $base-spacing * 5;
+  left: $side-margin;
+
+  .go-back__icon {
+    font-size: $base-spacing * 4;
+    color: $red;
+  }
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: $side-margin $side-margin;
+  background-image: url("../images/bg-error.png");
+  background-size: cover;
+  background-position: center;
+
+  .error__title {
+    font-size: $base-spacing * 7;
+    color: $dark-grey;
+    text-align: center;
+    margin-bottom: $base-spacing * 4;
+  }
+
+  .error__text {
+    font-size: $base-spacing * 3;
+    font-weight: $light;
+    color: $dark-grey;
+    text-align: center;
+  }
+}
+
+/*------------------------------------*\
+  #ERROR MOBILE
+\*------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  .go-back {
+    position: fixed;
+    top: $base-spacing * 4;
+    left: $base-spacing * 3;
+  }
+
+  .error {
+    padding: $base-spacing * 3 $base-spacing * 3;
+
+    .error__title {
+      font-size: 8vw;
+      margin-bottom: $base-spacing * 2;
+    }
+    .error__text {
+      font-size: 4vw;
+    }
+  }
+}

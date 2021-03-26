@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/images/web-16x16.png" sizes="16x16" />
+    <title>Home</title>
+</head>
+
+<body>
+    <header id="head" class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img alt="jmmartin-logo" src="./assets/images/Logo-jmmartin.png" />
+            </a>
+        </div>
+
+        <button class="hamburger hamburger--vortex" id="hamburger">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <div class="header__menu js-header__menu">
+            <p class="lang js-lang">
+                <a class="lang__link" href="error-eng.html"><span class="lang__selector--esp">ESP</span>/ENG</a>
+            </p>
+
+            <nav id="menu" class="menu js-menu">
+                <ul class="menu__list js-menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--active" href="index.html">About me</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="work.html">Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="back-to-top">
+        <a class="back-to-top__link" href="#head">
+            <i class="iconify back-to-top__icon" data-icon="bi:arrow-up-circle-fill"></i>
+        </a>
+    </div>
+
+    <main>
+        <section class="intro">
+            <h1 class="intro__title">¡Hola! Soy José Manuel Martín</h1>
+            <p class="intro__description">
+                Product designer que disfruta creando experiencias únicas y
+                agrabables. Apoyando el diseño del producto en la
+                investigación de usuario para conseguir los mejores
+                resultados.
+            </p>
+        </section>
+
+        <section class="about">
+            <div class="about__text-center">
+                <h2 class="about__title">Sobre mí</h2>
+                <p class="about__paragraph">
+                    Sobre mi puedo decir que soy un autentico apasionado por
+                    el diseño y por todo lo que lo rodea. Esta pasión la
+                    descubrí cuando estudiaba artes y oficios. El mundo del
+                    diseño me cautivó tanto que decidí invertir todos mis
+                    esfuerzos en poderme dedicar a ello. Es por este motivo
+                    que decidí formarme en un Grado universitario en diseño
+                    y creación digitales, algo que me ha dado muchos
+                    conocimientos sobre el campo del diseño. En este grado,
+                    fue donde descubrí todo lo que tenía que ver con el
+                    diseño UX y UI. Desde ese momento, supe que era a lo que
+                    quería dedicarme, ya que pude observar que eran unas
+                    disciplinas que tenían una gran relevancia en el cambio
+                    digital que vivimos.
+                </p>
+                <p class="about__paragraph">
+                    Lo que más me gusta de este campo es que tu trabajo
+                    trasciende más allá de “lo bonito”, al poder propiciar
+                    que las interfaces por las que nos movemos cada día sean
+                    más sencillas. Esto es clave para mí, pienso que el
+                    enfocar el diseño como medio para hacer más fácil la
+                    vida de los usuarios es el camino a seguir. El poder
+                    crear unas interfaces que sean amigables con las
+                    diversas funcionalidades de las personas, y que en
+                    definitiva puedan hacer la vida de alguien más
+                    agradable, es la recompensa más grande que puedo obtener
+                    como diseñador.
+                </p>
+                <p class="about__paragraph">
+                    En cuanto a mis cualidades, la que más destacaría sería
+                    la curiosidad. Es por esta curiosidad que estoy leyendo
+                    siempre que puedo sobre diseño y otros campos
+                    complementarios para mejorar más en mi trabajo. Esta
+                    curiosidad también me ha empujado a seguir formándome,
+                    esta vez con un máster en desarrollo de aplicaciones y
+                    sitios web. Me decanté por este máster para ampliar mis
+                    conocimientos tecnológicos en cuanto a desarrollo, en
+                    especial frontend, para así comprender mejor la labor de
+                    los desarrolladores y trabajar mejor en equipo.
+                </p>
+                <p class="about__paragraph">
+                    Para saber más cosas sobre mí, no dudes en ojear mis
+                    trabajos o mis perfiles sociales, y si con esto no es
+                    suficiente contacta conmigo por email.
+                </p>
+
+                <p class="about__mail">me@jmmartindesign.com</p>
+
+                <div class="about__social">
+                    <a href="#"><i class="iconify about__social-icon"
+                            data-icon="ant-design:medium-circle-filled"></i></a>
+                    <a href="#"><i class="iconify about__social-icon"
+                            data-icon="ant-design:behance-circle-filled"></i></a>
+                    <a href="#"><i class="iconify about__social-icon"
+                            data-icon="ant-design:dribbble-circle-filled"></i></a>
+                    <a href="#"><i class="iconify about__social-icon about__social-icon--adjusting"
+                            data-icon="entypo-social:linkedin-with-circle"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2 class="process__title">Mi proceso</h2>
+
+            <div class="process__row">
+                <div class="process__item">
+                    <h3 class="process__subtitle">Empatizar</h3>
+                    <img class="process__image" src="./assets/images/ux-researcher.png" alt="ux-research" />
+                    <p class="process__paragraph">
+                        Todos mis proyectos parten desde la investigación
+                        del usuario, para poder encontrar los insight que
+                        nos lleven a la mejor solución.
+                    </p>
+                </div>
+                <div class="process__item">
+                    <h3 class="process__subtitle">Definir</h3>
+                    <img class="process__image" src="./assets/images/prototype.png" alt="ux-research" />
+                    <p class="process__paragraph">
+                        Definir los insight obtenidos en prototipos es
+                        crucial para ver que ideas funcionan mejor y cuáles
+                        deben ser descartadas.
+                    </p>
+                </div>
+                <div class="process__item">
+                    <h3 class="process__subtitle">Testear</h3>
+                    <img class="process__image" src="./assets/images/test.png" alt="ux-research" />
+                    <p class="process__paragraph">
+                        El testeo de las diferentes opciones de prototipos
+                        creados nos dá las herramientas para iterar en el
+                        proceso aplicando mejoras.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="principles">
+            <h2 class="principles__title">Principios de diseño</h2>
+
+            <div class="principles__row">
+                <div class="principles__item principles__item--one">
+                    <h3 class="principles__subtitle">Principio uno</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+                <div class="principles__item principles__item--two">
+                    <h3 class="principles__subtitle">Principio dos</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+                <div class="principles__item principles__item--three">
+                    <h3 class="principles__subtitle">Principio tres</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+            </div>
+
+            <div class="principles__row">
+                <div class="principles__item principles__item--four">
+                    <h3 class="principles__subtitle">Principio cuatro</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+                <div class="principles__item principles__item--five">
+                    <h3 class="principles__subtitle">Principio cinco</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+                <div class="principles__item principles__item--six">
+                    <h3 class="principles__subtitle">Principio seis</h3>
+                    <p class="principles__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Itaque, placeat cumque tempora distinctio
+                        similique animi a facere, laborum illo nihil
+                        temporibus repellendus aperiam natus quia esse dolor
+                        ratione dignissimos. Suscipit!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__justify-content">
+            <p class="footer__mail">me@jmmartindesign.com</p>
+
+            <div class="social">
+                <a href="#"><i class="iconify social__icon social__icon--white"
+                        data-icon="ant-design:medium-circle-filled"></i></a>
+                <a href="#"><i class="iconify social__icon social__icon--white"
+                        data-icon="ant-design:behance-circle-filled"></i></a>
+                <a href="#"><i class="iconify social__icon social__icon--white"
+                        data-icon="ant-design:dribbble-circle-filled"></i></a>
+                <a href="#"><i class="iconify social__icon social__icon--white social__icon--adjusting"
+                        data-icon="entypo-social:linkedin-with-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+    <script src="https://code.iconify.design/2/2.0.0-rc.6/iconify.min.js"></script>
+</body>
+
+</html>

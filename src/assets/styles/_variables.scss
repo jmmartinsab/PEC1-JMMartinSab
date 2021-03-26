@@ -1,0 +1,36 @@
+@use "sass:color";
+
+/**
+*FONTS
+*/
+
+$main-font: "Poppins", arial, sans-serif;
+$font-size: 18px;
+
+//weights
+$light: 300;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+/**
+*COLORS
+*/
+
+$red: #8e1b1b;
+$dark-grey: #1f1d1d;
+$light-grey: #524c4c;
+$white: #fff;
+$top-icon-grey: #686363;
+
+/**
+*SPACING
+*
+*We will use an 8px rule in which it is possible to use 4px in some cases, eg. Like use 12 PX or 20 PX or values like this.
+*/
+
+$base-spacing: 8px;
+$side-margin: $base-spacing * 8;
+$document-width: 100%;
